@@ -33,4 +33,11 @@ class IntegerConversionServiceTest {
         assertEquals("XXIII", output);
     }
 
+    @Test
+    void processIntegerToRomanNumeralWhenInHundredsTest() {
+        IntegerConversionService icService = new IntegerConversionService(mockRomanNumeralRepository);
+        String output = icService.processIntegerToRomanNumeral(234);
+        assertEquals("CCXXXIV", output);
+    }
+
 }
