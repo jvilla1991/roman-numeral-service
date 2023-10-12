@@ -26,4 +26,11 @@ class IntegerConversionServiceTest {
         assertEquals("II", output);
     }
 
+    @Test
+    void processIntegerToRomanNumeralWhenInTensTest() {
+        IntegerConversionService icService = new IntegerConversionService(mockRomanNumeralRepository);
+        String output = icService.processIntegerToRomanNumeral(23);
+        assertEquals("XXIII", output);
+    }
+
 }
