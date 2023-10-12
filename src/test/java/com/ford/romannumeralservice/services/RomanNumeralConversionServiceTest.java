@@ -42,4 +42,18 @@ class RomanNumeralConversionServiceTest {
         Integer output = romanNumeralConversionService.processRomanNumeralToInteger(testRomanNumeral);
         assertEquals(234, output);
     }
+
+    @Test
+    void processRomanNumeralToIntegerThousandsTest() {
+        String testRomanNumeral = "MCCXXXIV";
+        Integer output = romanNumeralConversionService.processRomanNumeralToInteger(testRomanNumeral);
+        assertEquals(1234, output);
+    }
+
+    @Test
+    void processRomanNumeralToIntegerTwoThousandsTest() {
+        String testRomanNumeral = "MMCCXXXIV";
+        Integer output = romanNumeralConversionService.processRomanNumeralToInteger(testRomanNumeral);
+        assertEquals(2234, output);
+    }
 }
