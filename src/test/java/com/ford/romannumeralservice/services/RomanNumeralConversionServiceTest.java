@@ -35,4 +35,11 @@ class RomanNumeralConversionServiceTest {
         Integer output = romanNumeralConversionService.processRomanNumeralToInteger(testRomanNumeral);
         assertEquals(23, output);
     }
+
+    @Test
+    void processRomanNumeralToIntegerHundredsTest() {
+        String testRomanNumeral = "CCXXXIV";
+        Integer output = romanNumeralConversionService.processRomanNumeralToInteger(testRomanNumeral);
+        assertEquals(234, output);
+    }
 }
