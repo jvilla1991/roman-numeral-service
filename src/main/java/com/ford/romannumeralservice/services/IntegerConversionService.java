@@ -8,5 +8,5 @@ public class IntegerConversionService {
     public String processIntegerToRomanNumeral(Integer number) {
         return "";
     }
-    
+
 }
