@@ -18,19 +18,19 @@ public class IntegerConversionService {
         StringBuilder sbOutput = new StringBuilder();
         while(number > 0) {
             if (number / 1000 != 0) {
-                sbOutput.append(mockRomanNumeralRepository.readDataFromJson((number / 1000) * 1000));
+                sbOutput.append(mockRomanNumeralRepository.getRomanNumeralFromInt((number / 1000) * 1000));
                 number = number % 1000;
             }
             else if (number / 100 != 0) {
-                sbOutput.append(mockRomanNumeralRepository.readDataFromJson((number / 100) * 100));
+                sbOutput.append(mockRomanNumeralRepository.getRomanNumeralFromInt((number / 100) * 100));
                 number = number % 100;
             }
             else if (number / 10 != 0) {
-                sbOutput.append(mockRomanNumeralRepository.readDataFromJson((number / 10) * 10));
+                sbOutput.append(mockRomanNumeralRepository.getRomanNumeralFromInt((number / 10) * 10));
                 number = number % 10;
             }
             else {
-                sbOutput.append(mockRomanNumeralRepository.readDataFromJson(number));
+                sbOutput.append(mockRomanNumeralRepository.getRomanNumeralFromInt(number));
                 number -= number;
             }
         }
