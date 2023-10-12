@@ -15,6 +15,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 
 class MockRomanNumeralRepositoryTest {
@@ -31,12 +32,11 @@ class MockRomanNumeralRepositoryTest {
     }
 
     @Test
-    void readRomanNumeralFromJsonTest() {
-        String output = mockRomanNumeralRepository.readDataFromJson(1);
-        assertEquals("I", output);
+    public void getDataTest() {
+        Map<Integer, String> data = mockRomanNumeralRepository.getData();
 
-        output = mockRomanNumeralRepository.readDataFromJson(1000);
-        assertEquals("M", output);
+        assertNotNull(data);
+        assertEquals(29, data.size());
     }
 
 }
