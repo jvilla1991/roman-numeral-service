@@ -40,4 +40,11 @@ class IntegerConversionServiceTest {
         assertEquals("CCXXXIV", output);
     }
 
+    @Test
+    void processIntegerToRomanNumeralWhenInThousandsTest() {
+        IntegerConversionService icService = new IntegerConversionService(mockRomanNumeralRepository);
+        String output = icService.processIntegerToRomanNumeral(1234);
+        assertEquals("MCCXXXIV", output);
+    }
+
 }
